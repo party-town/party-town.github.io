@@ -4,7 +4,7 @@ on:
     branches:
       - deploy
   release:
-     types: [edited]
+     types: [published]
     
     
 
