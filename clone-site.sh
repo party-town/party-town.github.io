@@ -4,3 +4,4 @@ wget https://partytown.pythonanywhere.com/static/api/images/service-gallerRight-
 wget https://partytown.pythonanywhere.com/static/api/images/service-gallerLeft-arrow.png -P partytown.pythonanywhere.com/static/api/images/
 wget https://partytown.pythonanywhere.com/sitemap.xml -P partytown.pythonanywhere.com/
 echo "partytown.co.in" > partytown.pythonanywhere.com/CNAME
+cp sitemap.xml partytown.pythonanywhere.com/sitemap.xml
