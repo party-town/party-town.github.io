@@ -3,6 +3,10 @@ on:
   push:
    branches:
    - deploy
+  release:
+    type: [edited]
+    
+    
 
 jobs:
   deploy-site:
