@@ -2,10 +2,10 @@ name: Deploy site
 on:
   push:
    branches:
-   - master
+   - deploy
 
 jobs:
-  rustdoc:
+  deploy-site:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +19,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
+        publish_branch: master
         publish_dir: ./partytown.pythonanywhere.com
         force_orphan: true
