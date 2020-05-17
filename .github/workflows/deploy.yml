@@ -22,3 +22,5 @@ jobs:
         publish_branch: master
         publish_dir: ./partytown.pythonanywhere.com
         force_orphan: true
+    - name: "Print Run ID"
+      run: echo $GITHUB_RUN_ID
