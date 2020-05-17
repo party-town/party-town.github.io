@@ -1,0 +1,24 @@
+name: Deploy site
+on:
+  push:
+   branches:
+   - master
+
+jobs:
+  rustdoc:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Clone site
+      run: bash clone-site.sh
+
+    - name: Deploy to GH Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./partytown.pythonanywhere.com
+        force_orphan: true
