@@ -1,8 +1,5 @@
 name: Deploy site
 on:
-  push:
-    branches:
-      - deploy
   release:
      types: [published]
     
